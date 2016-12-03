@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ly.singup.dao.IDictionaryDAO">
+
+	<select id="findAllByItem" parameterType="String" resultType="Dictionary">
+		select dtid,item,title,value from dictionary where item=#{item}
+	</select>
+
+	<select id="findById" parameterType="Integer" resultType="Dictionary">
+		SELECT dtid,item,title,value FROM dictionary WHERE dtid=#{dtid}
+	</select>
+
+</mapper>

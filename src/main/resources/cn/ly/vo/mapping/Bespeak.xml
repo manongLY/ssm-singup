@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ly.singup.dao.IBespeakDAO">
+	<insert id="doCreate" parameterType="Bespeak">
+		INSERT INTO bespeak(typeid,eduid,srcid,name,phone,school,edu,bedate,indate,status,benote, note,type,src)
+		VALUES(#{typeid},#{eduid},#{srcid},#{name},#{phone},
+		#{school},#{edu},#{bedate},#{indate},#{status},#{benote},#{note},#{type},#{src}) ;
+	</insert>
+
+</mapper>
